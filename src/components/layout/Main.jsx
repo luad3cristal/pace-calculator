@@ -7,15 +7,19 @@ function Main() {
   const handleChange = () => {};
 
   return (
-    <main>
-      <h1>Hello World!</h1>
-      <Input
-        name="distance"
-        text="Distância"
-        placeholder="0"
-        handleOnChange={handleChange}
-      />
-    </main>
+    <div className={S.container}>
+      <main className={S.main}>
+        <div className={S.distance_box}>
+          <Input
+            name="distance"
+            text="Distância"
+            placeholder="0"
+            handleOnChange={handleChange}
+          />
+          <Select />
+        </div>
+      </main>
+    </div>
   );
 }
 

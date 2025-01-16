@@ -1,0 +1,16 @@
+.select {
+  background-color: var(--light-km-detail-color);
+  border: none;
+  outline: none;
+  color: var(--white);
+
+  width: 52px;
+  height: 38px;
+  border-radius: 0px 4px 4px 0px;
+
+  font-size: 16px;
+  padding-left: 2px;
+  font-weight: 600;
+
+  cursor: pointer;
+}

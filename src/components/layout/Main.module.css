@@ -1,0 +1,23 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--board-text-color);
+}
+
+.main {
+  min-width: 300px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.distance_box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5px;
+}
