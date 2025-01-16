@@ -1,0 +1,81 @@
+.form_control {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  gap: 5px;
+
+  color: var(--light-input-text-focused-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.94px;
+
+  cursor: text;
+}
+
+.tracos {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 10px;
+}
+
+.tracos::before,
+.tracos::after,
+.tracos span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  background-color: var(--light-board-color);
+
+  top: 40%;
+  transform: translateY(-50%) rotate(125deg);
+}
+
+.tracos::before {
+  left: 0;
+}
+
+.tracos span {
+  left: 6px;
+}
+
+.tracos::after {
+  left: 11px;
+}
+
+.input {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--input-text-focused-color);
+
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px 0px 0px 4px;
+  background-color: var(--board-detail-color);
+}
+
+.input::placeholder {
+  color: var(--input-text-unfocused-color);
+}
+
+.input:focus {
+  border-bottom: 2px solid var(--light-board-color);
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

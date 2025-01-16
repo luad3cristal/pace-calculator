@@ -12,7 +12,11 @@
   --light-input-text-focused-color: #382314;
   --light-km-detail-color: #efb99c;
   --light-board-color: #ec775f;
-  --dark-board-color: #D35454;
-  --dark-input-bg-color: #3C3C3C;
+  --dark-board-color: #d35454;
+  --dark-input-bg-color: #3c3c3c;
   --dark-km-detail-color: #584848;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
 }
