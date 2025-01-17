@@ -1,0 +1,47 @@
+.label {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  gap: 5px;
+
+  color: var(--light-input-text-focused-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.94px;
+
+  cursor: pointer;
+  width: 40px;
+}
+
+.tracos {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 10px;
+}
+
+.tracos::before,
+.tracos::after,
+.tracos span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  background-color: var(--light-board-color);
+
+  top: 40%;
+  transform: translateY(-50%) rotate(125deg);
+}
+
+.tracos::before {
+  left: 0;
+}
+
+.tracos span {
+  left: 5px;
+}
+
+.tracos::after {
+  left: 10px;
+}

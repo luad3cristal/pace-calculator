@@ -1,16 +1,10 @@
 import S from "./Input.module.css";
 
-function Input({ name, text, placeholder, handleOnChange }) {
+function Input({ name, placeholder, handleOnChange, customClass }) {
   return (
     <div className={S.form_control}>
-      <label htmlFor={name} className={S.label}>
-        {text}
-        <div className={S.tracos}>
-          <span></span>
-        </div>
-      </label>
       <input
-        className={S.input}
+        className={`${S.input} ${S[customClass]}`}
         type="number"
         name={name}
         id={name}

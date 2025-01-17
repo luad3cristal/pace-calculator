@@ -14,10 +14,23 @@
   max-width: 400px;
 }
 
+.distance_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .distance_box {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 5px;
+}
+
+.time_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
 }
