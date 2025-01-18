@@ -1,8 +1,8 @@
 import S from "./Main.module.css";
 
-import Input from "../form/Input";
-import Select from "../form/Select";
-import Label from "../form/Label";
+import Input from "../components/input/Input";
+import Select from "../components/select/Select";
+import Label from "../components/label/Label";
 
 function Main() {
   const distanceChange = () => {};
