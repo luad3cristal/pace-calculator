@@ -23,29 +23,32 @@ function Main() {
             <Select handleOnChange={distanceKindChange} />
           </div>
         </section>
-        {/* <section>
-          <Label name="time" text="Tempo" />
+        <section className={S.time_container}>
+          <Label text="Tempo" />
           <div className={S.time_box}>
             <Input
-              name="time"
+              name="hour"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
+              text="hr"
             />
             <Input
-              name="time"
+              name="minutes"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
+              text="min"
             />
             <Input
-              name="time"
+              name="seconds"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
+              text="seg"
             />
           </div>
-        </section> */}
+        </section>
       </main>
     </div>
   );

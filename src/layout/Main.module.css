@@ -11,7 +11,7 @@
 .main {
   min-width: 300px;
   width: 80%;
-  max-width: 400px;
+  max-width: 500px;
 
   display: flex;
   flex-direction: column;
@@ -25,18 +25,18 @@
   gap: 8px;
 }
 
-.distance_box {
+.distance_box,
+.time_box {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
   gap: 5px;
 }
 
+.distance_box {
+  align-items: flex-end;
+  justify-content: space-between;
+}
 
 .time_box {
-  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 }

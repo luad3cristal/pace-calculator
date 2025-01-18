@@ -1,6 +1,8 @@
 import S from "./Input.module.css";
 
-function Input({ name, placeholder, handleOnChange, customClass }) {
+function Input({ name, placeholder, handleOnChange, customClass, text }) {
+  //checar se o tempo tá passando de 60
+
   return (
     <div className={S.form_control}>
       <input
@@ -11,6 +13,7 @@ function Input({ name, placeholder, handleOnChange, customClass }) {
         placeholder={placeholder}
         onChange={handleOnChange}
       />
+      {text && <span>{text}</span>}
     </div>
   );
 }
