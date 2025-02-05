@@ -3,6 +3,7 @@ import S from "./Main.module.css";
 import Input from "../components/input/Input";
 import Select from "../components/select/Select";
 import Label from "../components/label/Label";
+import Painel from "../components/painel/Painel";
 
 function Main() {
   const distanceChange = () => {};
@@ -48,6 +49,9 @@ function Main() {
               text="seg"
             />
           </div>
+        </section>
+        <section className={S.painel_container}>
+          <Painel />
         </section>
       </main>
     </div>

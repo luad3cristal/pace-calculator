@@ -1,0 +1,68 @@
+.painel {
+  height: 260px;
+  width: 100%;
+  min-width: 300px;
+
+  padding: 30px 20px;
+  border-radius: 12px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  color: white;
+  background-color: var(--light-board-color);
+}
+
+.theme_button {
+  all: unset;
+  cursor: pointer;
+
+  width: 32px;
+  height: 32px;
+
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.pace_box h3,
+.speed_box h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.pace_box div {
+  width: 180px;
+}
+
+.speed_box div {
+  width: 190px;
+}
+
+.pace_box div,
+.speed_box div {
+  height: 45px;
+  display: flex;
+  position: relative;
+}
+
+.pace_box h2,
+.speed_box h2 {
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pace_box span,
+.speed_box span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

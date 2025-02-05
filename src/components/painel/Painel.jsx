@@ -2,22 +2,8 @@ import S from "./Painel.module.css";
 
 const Painel = () => {
   return (
-    <section>
-      <div className={S.pace_box}>
-        <h3>Pace</h3>
-        <div>
-          <h2>00:00</h2>
-          <span>/km</span>
-        </div>
-      </div>
-      <div className={S.speed_box}>
-        <h3>Velocidade</h3>
-        <div>
-          <h2>00:00</h2>
-          <span>km/h</span>
-        </div>
-      </div>
-      <button>
+    <section className={S.painel}>
+      <button className={S.theme_button}>
         <svg
           width="32"
           height="32"
@@ -70,6 +56,20 @@ const Painel = () => {
           </defs>
         </svg>
       </button>
+      <div className={S.pace_box}>
+        <h3>Pace</h3>
+        <div>
+          <h2>00:00</h2>
+          <span>/km</span>
+        </div>
+      </div>
+      <div className={S.speed_box}>
+        <h3>Velocidade</h3>
+        <div>
+          <h2>00:00</h2>
+          <span>km/h</span>
+        </div>
+      </div>
     </section>
   );
 };
