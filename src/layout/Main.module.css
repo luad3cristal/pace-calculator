@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--board-text-color);
+  background-color: var(--bg-color);
 }
 
 .main {

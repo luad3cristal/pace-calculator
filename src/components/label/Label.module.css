@@ -4,7 +4,7 @@
   flex-direction: row;
   gap: 5px;
 
-  color: var(--light-input-text-focused-color);
+  color: var(--label-text-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 21.94px;
@@ -28,10 +28,11 @@
   position: absolute;
   width: 10px;
   height: 1.5px;
-  background-color: var(--light-board-color);
+  background-color: var(--input-details-color);
 
   top: 40%;
   transform: translateY(-50%) rotate(125deg);
+  cursor: default;
 }
 
 .tracos::before {

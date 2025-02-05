@@ -1,5 +1,5 @@
 .select {
-  background-color: var(--light-km-detail-color);
+  background-color: var(--km-bg-color);
   border: none;
   outline: none;
   color: var(--white);
