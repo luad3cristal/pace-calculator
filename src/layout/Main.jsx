@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import S from "./Main.module.css";
 
 import Input from "../components/input/Input";
@@ -9,6 +10,17 @@ function Main() {
   const distanceChange = () => {};
   const distanceKindChange = () => {};
   const timeChange = () => {};
+
+  const [lightTheme, setLightTheme] = useState(true);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute("data-theme", lightTheme ? "light" : "dark");
+  }, [lightTheme]);
+
+  const toggleTheme = () => {
+    setLightTheme(!lightTheme);
+  };
 
   return (
     <div className={S.container}>
@@ -51,7 +63,7 @@ function Main() {
           </div>
         </section>
         <section className={S.painel_container}>
-          <Painel />
+          <Painel toggleTheme={toggleTheme} lightTheme={lightTheme} />
         </section>
       </main>
     </div>
