@@ -7,11 +7,28 @@ import Label from "../components/label/Label";
 import Painel from "../components/painel/Painel";
 
 function Main() {
-  const distanceChange = () => {};
-  const distanceKindChange = () => {};
-  const timeChange = () => {};
-
   const [lightTheme, setLightTheme] = useState(true);
+  const [distance, setDistance] = useState("");
+  const [distanceKind, setDistanceKind] = useState("km");
+  const [time, setTime] = useState({ hr: 0, min: 0, segs: 0 });
+
+  const distanceChange = (distancia) => {
+    setDistance({
+      ...distance,
+      [distancia.target.name]: distancia.target.value,
+    });
+  };
+  const distanceKindChange = () => {
+    setDistanceKind(distanceKind === "km" ? "m" : "km");
+  };
+  const timeChange = (tempo) => {
+    const { name, value } = tempo.target;
+    setTime((timePrev) => ({
+      ...timePrev,
+      [name]: Number(value),
+    }));
+    console.log(time);
+  };
 
   useEffect(() => {
     const root = document.documentElement;
@@ -40,21 +57,21 @@ function Main() {
           <Label text="Tempo" />
           <div className={S.time_box}>
             <Input
-              name="hour"
+              name="hr"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
               text="hr"
             />
             <Input
-              name="minutes"
+              name="min"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
               text="min"
             />
             <Input
-              name="seconds"
+              name="segs"
               placeholder="0"
               handleOnChange={timeChange}
               customClass="time_input"
