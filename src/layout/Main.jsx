@@ -8,26 +8,24 @@ import Painel from "../components/painel/Painel";
 
 function Main() {
   const [lightTheme, setLightTheme] = useState(true);
-  const [distance, setDistance] = useState("");
+  const [distance, setDistance] = useState(0);
   const [distanceKind, setDistanceKind] = useState("km");
   const [time, setTime] = useState({ hr: 0, min: 0, segs: 0 });
 
   const distanceChange = (distancia) => {
-    setDistance({
-      ...distance,
-      [distancia.target.name]: distancia.target.value,
-    });
+    setDistance(Number(distancia.target.value) || 0);
   };
-  const distanceKindChange = () => {
-    setDistanceKind(distanceKind === "km" ? "m" : "km");
+
+  const distanceKindChange = (event) => {
+    setDistanceKind(event.target.value);
   };
+
   const timeChange = (tempo) => {
     const { name, value } = tempo.target;
     setTime((timePrev) => ({
       ...timePrev,
       [name]: Number(value),
     }));
-    console.log(time);
   };
 
   useEffect(() => {
@@ -50,7 +48,7 @@ function Main() {
               placeholder="0"
               handleOnChange={distanceChange}
             />
-            <Select handleOnChange={distanceKindChange} />
+            <Select value={distanceKind} handleOnChange={distanceKindChange} />
           </div>
         </section>
         <section className={S.time_container}>
@@ -80,7 +78,13 @@ function Main() {
           </div>
         </section>
         <section className={S.painel_container}>
-          <Painel toggleTheme={toggleTheme} lightTheme={lightTheme} />
+          <Painel
+            toggleTheme={toggleTheme}
+            lightTheme={lightTheme}
+            time={time}
+            distance={distance}
+            distanceKind={distanceKind}
+          />
         </section>
       </main>
     </div>

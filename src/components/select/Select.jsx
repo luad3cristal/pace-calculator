@@ -1,11 +1,16 @@
 import S from "./Select.module.css";
 
-function Select({ handleOnChange }) {
+function Select({ value, handleOnChange }) {
   return (
     <div>
-      <select name="distance" className={S.select} onChange={handleOnChange}>
-        <option value="quilometros">Km</option>
-        <option value="metros">M</option>
+      <select
+        name="distanceKind"
+        className={S.select}
+        onChange={handleOnChange}
+        value={value}
+      >
+        <option value="km">Km</option>
+        <option value="m">M</option>
       </select>
     </div>
   );
