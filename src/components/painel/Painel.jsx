@@ -30,9 +30,7 @@ const Painel = ({ toggleTheme, lightTheme, time, distance, distanceKind }) => {
     );
   };
 
-  const calculoDistancia = () => {
-    //consertar o caso do cálculo de metro
-    
+  const calculoDistancia = () => {    
     if (!time || !distance) {
       setPace("00:00");
       setSpeed("00:00");

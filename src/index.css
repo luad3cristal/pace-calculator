@@ -19,6 +19,7 @@
   --input-focus-color: #ec775f;
   --km-bg-color: #efb99c;
   --board-bg-color: #ec775f;
+  --message-bg-color: #ec775f;
 }
 
 [data-theme="dark"] {
@@ -30,6 +31,7 @@
   --input-focus-color: #d35454;
   --km-bg-color: #584848;
   --board-bg-color: #d35454;
+  --message-bg-color: #d35454;
 }
 
 body {

@@ -1,12 +1,15 @@
+import { useState } from "react";
 import S from "./Input.module.css";
 
 function Input({ name, placeholder, handleOnChange, customClass, text }) {
+  const [message, setMessage] = useState("");
+
   const handleInputChange = (tempo) => {
     let { name, value } = tempo.target;
     value = Number(value);
 
     if (value < 0) value = 0;
-    if ((name === "min" || name === "segs") && value > 59) value = 59;
+    if ((name === "min" || name === "segs") && value > 59) value = 0;
 
     handleOnChange({ target: { name, value } });
   };
