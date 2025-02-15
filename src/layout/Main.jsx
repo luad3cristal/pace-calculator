@@ -11,8 +11,6 @@ function Main() {
   const [distance, setDistance] = useState(0);
   const [distanceKind, setDistanceKind] = useState("km");
   const [time, setTime] = useState({ hr: 0, min: 0, segs: 0 });
-  const [hasChanged, setHasChanged] = useState(false);
-  const [message, setMessage] = useState("");
 
   const distanceChange = (distancia) => {
     setDistance(Number(distancia.target.value) || 0);
@@ -28,21 +26,7 @@ function Main() {
       ...timePrev,
       [name]: Number(value),
     }));
-
-    setHasChanged(true);
   };
-
-  useEffect(() => {
-    if (!hasChanged) return;
-
-    if (time.hr === 0 && time.min === 0 && time.segs === 0) {
-      setMessage("Tempo Inválido");
-      setTimeout(() => {
-        setMessage("");
-      }, 3000);
-    }
-  }, [time]);
-
 
   useEffect(() => {
     const root = document.documentElement;
@@ -55,12 +39,6 @@ function Main() {
 
   return (
     <div className={S.container}>
-      {message && (
-        <div className={S.message_box}>
-          <h3>{message}</h3>
-        </div>
-      )}
-
       <main className={S.main}>
         <section className={S.distance_container}>
           <Label name="distance" text="Distância" />

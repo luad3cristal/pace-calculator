@@ -1,9 +1,6 @@
-import { useState } from "react";
 import S from "./Input.module.css";
 
 function Input({ name, placeholder, handleOnChange, customClass, text }) {
-  const [message, setMessage] = useState("");
-
   const handleInputChange = (tempo) => {
     let { name, value } = tempo.target;
     value = Number(value);
