@@ -67,6 +67,7 @@ function Main() {
               handleOnChange={timeChange}
               customClass="time_input"
               text="min"
+              max="59"
             />
             <Input
               name="segs"
@@ -74,6 +75,7 @@ function Main() {
               handleOnChange={timeChange}
               customClass="time_input"
               text="seg"
+              max="59"
             />
           </div>
         </section>

@@ -1,6 +1,6 @@
 import S from "./Input.module.css";
 
-function Input({ name, placeholder, handleOnChange, customClass, text }) {
+function Input({ name, placeholder, handleOnChange, customClass, text, max }) {
   const handleInputChange = (tempo) => {
     let { name, value } = tempo.target;
     value = Number(value);
@@ -20,6 +20,8 @@ function Input({ name, placeholder, handleOnChange, customClass, text }) {
         id={name}
         placeholder={placeholder}
         onChange={handleInputChange}
+        min="0"
+        max={max}
       />
       {text && <span>{text}</span>}
     </div>
