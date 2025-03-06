@@ -67,19 +67,17 @@
   font-weight: 500;
   letter-spacing: 1px;
 }
-/*
-.pace_box div {
-  width: 205px;
+
+.pace_box div .pace_number,
+.speed_box div .speed_number {
+  min-width: 100px;
+  max-width: 100%;
+
+  white-space: nowrap;
 }
 
-.speed_box div {
-  width: 215px;
+.pace_box div .pace_number h2,
+.speed_box div .speed_number h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.pace_box div,
-.speed_box div {
-  height: 43px;
-  display: flex;
-  position: relative;
-}
- */
