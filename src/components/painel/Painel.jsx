@@ -62,15 +62,23 @@ const Painel = ({ toggleTheme, lightTheme, time, distance, distanceKind }) => {
       <div className={S.pace_box}>
         <h3>Pace</h3>
         <div>
-          <h2>{pace}</h2>
-          <span>/km</span>
+          <div className={S.pace_number}>
+            <h2>{pace}</h2>
+          </div>
+          <div className={S.pace_measurement}>
+            <span>/km</span>
+          </div>
         </div>
       </div>
       <div className={S.speed_box}>
         <h3>Velocidade</h3>
         <div>
-          <h2>{speed}</h2>
-          <span>km/h</span>
+          <div className={S.speed_number}>
+            <h2>{speed}</h2>
+          </div>
+          <div className={S.speed_measurement}>
+            <span>km/h</span>
+          </div>
         </div>
       </div>
     </section>
