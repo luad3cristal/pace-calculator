@@ -7,7 +7,7 @@ import Label from "../components/label/Label";
 import Painel from "../components/painel/Painel";
 
 function Main() {
-  const [lightTheme, setLightTheme] = useState(true);
+  const [theme, setTheme] = useState(true);
   const [distance, setDistance] = useState(0);
   const [distanceKind, setDistanceKind] = useState("km");
   const [time, setTime] = useState({ hr: 0, min: 0, segs: 0 });
@@ -28,14 +28,20 @@ function Main() {
     }));
   };
 
+  const toggleTheme = () => {
+    setTheme(!theme);
+  };
+
+  useEffect(() => {
+    const savedTheme = JSON.parse(window.localStorage.getItem("Theme"));
+    if (savedTheme === "dark") toggleTheme();
+  }, []);
+
   useEffect(() => {
     const root = document.documentElement;
-    root.setAttribute("data-theme", lightTheme ? "light" : "dark");
-  }, [lightTheme]);
-
-  const toggleTheme = () => {
-    setLightTheme(!lightTheme);
-  };
+    root.setAttribute("data-theme", theme ? "light" : "dark");
+    localStorage.setItem("Theme", JSON.stringify(theme ? "light" : "dark"));
+  }, [theme]);
 
   return (
     <div className={S.container}>
@@ -82,7 +88,7 @@ function Main() {
         <section className={S.painel_container}>
           <Painel
             toggleTheme={toggleTheme}
-            lightTheme={lightTheme}
+            theme={theme}
             time={time}
             distance={distance}
             distanceKind={distanceKind}

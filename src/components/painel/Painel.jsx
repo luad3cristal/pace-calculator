@@ -3,7 +3,7 @@ import darkIcon from "../../assets/dark-icon.svg";
 import lightIcon from "../../assets/light-icon.svg";
 import S from "./Painel.module.css";
 
-const Painel = ({ toggleTheme, lightTheme, time, distance, distanceKind }) => {
+const Painel = ({ toggleTheme, theme, time, distance, distanceKind }) => {
   const [pace, setPace] = useState();
   const [speed, setSpeed] = useState("00:00");
 
@@ -30,7 +30,7 @@ const Painel = ({ toggleTheme, lightTheme, time, distance, distanceKind }) => {
     );
   };
 
-  const calculoDistancia = () => {    
+  const calculoDistancia = () => {
     if (!time || !distance) {
       setPace("00:00");
       setSpeed("00:00");
@@ -57,7 +57,7 @@ const Painel = ({ toggleTheme, lightTheme, time, distance, distanceKind }) => {
   return (
     <section className={S.painel}>
       <button className={S.theme_button} onClick={toggleTheme}>
-        <img src={lightTheme ? darkIcon : lightIcon} alt="tema" />
+        <img src={theme ? darkIcon : lightIcon} alt="tema" />
       </button>
       <div className={S.pace_box}>
         <h3>Pace</h3>
