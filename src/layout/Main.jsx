@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import S from "./Main.module.css";
+import S from "./Main.module.scss";
 
 import Input from "../components/input/Input";
 import Select from "../components/select/Select";

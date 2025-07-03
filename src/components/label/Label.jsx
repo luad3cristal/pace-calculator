@@ -1,4 +1,4 @@
-import S from "./Label.module.css";
+import S from "./Label.module.scss";
 
 const Label = ({ name, text }) => {
   return (

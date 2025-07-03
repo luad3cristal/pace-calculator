@@ -1,4 +1,4 @@
-import S from "./Select.module.css";
+import S from "./Select.module.scss";
 
 function Select({ value, handleOnChange }) {
   return (

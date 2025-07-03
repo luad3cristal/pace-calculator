@@ -1,4 +1,4 @@
-import S from "./Input.module.css";
+import S from "./Input.module.scss";
 
 function Input({ name, placeholder, handleOnChange, customClass, text, max }) {
   const handleInputChange = (tempo) => {

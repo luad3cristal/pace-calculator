@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import darkIcon from "../../assets/dark-icon.svg";
 import lightIcon from "../../assets/light-icon.svg";
-import S from "./Painel.module.css";
+import S from "./Painel.module.scss";
 
 const Painel = ({ toggleTheme, theme, time, distance, distanceKind }) => {
   const [pace, setPace] = useState();
