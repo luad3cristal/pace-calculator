@@ -13,71 +13,63 @@
 
   color: var(--white);
   background-color: var(--board-bg-color);
-}
 
-.theme_button {
-  all: unset;
-  cursor: pointer;
+  .theme_button {
+    all: unset;
+    cursor: pointer;
 
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 
-  position: absolute;
-  right: 15px;
-  top: 15px;
-}
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
 
-.pace_box h3,
-.speed_box h3 {
-  color: var(--board-title-color);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
+  .pace_box,
+  .speed_box {
+    h3 {
+      color: var(--board-title-color);
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
 
-.pace_box h2,
-.speed_box h2 {
-  color: var(--white);
-  font-size: 44px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+    h2 {
+      color: var(--white);
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-.pace_box div,
-.speed_box div {
-  display: flex;
-  gap: 20px;
-}
+    div {
+      display: flex;
+      gap: 20px;
 
-.pace_box div .pace_number,
-.speed_box div .speed_number {
-  min-width: 100px;
-  max-width: 100%;
-}
+      .pace_number,
+      .speed_number {
+        min-width: 100px;
+        max-width: 100%;
 
-.pace_box span,
-.speed_box span {
-  height: 43px;
+        white-space: nowrap;
 
-  display: flex;
-  align-items: flex-end;
-  color: var(--board-measure-color);
+        h2 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
 
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
+    span {
+      height: 43px;
 
-.pace_box div .pace_number,
-.speed_box div .speed_number {
-  min-width: 100px;
-  max-width: 100%;
+      display: flex;
+      align-items: flex-end;
+      color: var(--board-measure-color);
 
-  white-space: nowrap;
-}
-
-.pace_box div .pace_number h2,
-.speed_box div .speed_number h2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
 }

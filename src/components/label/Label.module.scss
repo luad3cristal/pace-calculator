@@ -11,38 +11,37 @@
 
   cursor: pointer;
   width: 40px;
-}
 
-.tracos {
-  display: inline-block;
-  position: relative;
-  width: 50px;
-  height: 10px;
-}
+  .tracos {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 10px;
 
-.tracos::before,
-.tracos::after,
-.tracos span {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 10px;
-  height: 1.5px;
-  background-color: var(--input-details-color);
+    &::before,
+    &::after,
+    span {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 10px;
+      height: 1.5px;
+      background-color: var(--input-details-color);
 
-  top: 40%;
-  transform: translateY(-50%) rotate(125deg);
-  cursor: default;
-}
+      top: 40%;
+      transform: translateY(-50%) rotate(125deg);
+      cursor: default;
+    }
+    &::before {
+      left: 0;
+    }
 
-.tracos::before {
-  left: 0;
-}
+    span {
+      left: 5px;
+    }
 
-.tracos span {
-  left: 5px;
-}
-
-.tracos::after {
-  left: 10px;
+    &::after {
+      left: 10px;
+    }
+  }
 }

@@ -4,50 +4,51 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-}
 
-.input {
-  width: 100%;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--input-text-color);
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid transparent;
-  border-radius: 4px 0px 0px 4px;
-  background-color: var(--input-bg-color);
-}
+  .input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--input-text-color);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px 0px 0px 4px;
+    background-color: var(--input-bg-color);
 
-.input::placeholder {
-  color: var(--input-placeholder-color);
-}
+    &::placeholder {
+      color: var(--input-placeholder-color);
+    }
 
-.input:focus {
-  border-bottom: 2px solid var(--input-focus-color);
-}
+    &:focus {
+      border-bottom: 2px solid var(--input-focus-color);
+    }
 
-.input[type="number"]::-webkit-inner-spin-button,
-.input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+    &[type="number"] {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
 
-.time_input {
-  border-radius: 4px;
-  position: relative;
-}
+    &.time_input {
+      border-radius: 4px;
+      position: relative;
+    }
+  }
 
-.form_control span {
-  position: absolute;
-  top: 45%;
-  right: 4px;
-  transform: translateY(-50%);
-  color: var(--input-details-color);
-
-  font-size: 14px;
-  font-weight: 600;
-  pointer-events: none;
-  background-color: var(--input-bg-color);
-  padding: 8px 10px;
+  span {
+    position: absolute;
+    top: 45%;
+    right: 4px;
+    transform: translateY(-50%);
+    color: var(--input-details-color);
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+    background-color: var(--input-bg-color);
+    padding: 8px 10px;
+  }
 }
